@@ -401,7 +401,7 @@ h2 {
 
 @media screen and (max-width: 500px) {
   .main_section{
-    height: 110vh;
+    height: 75vh;
   }
 
 }
