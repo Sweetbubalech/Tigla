@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Заголовок страницы</title>
+    <title>Hampton</title>
     <link rel="stylesheet" href="/css/style.css" />
-    <link rel="script" href="/scripts/language-switcher.js">
+    <link rel="script" href="/scripts/language-switcher.js" />
   </head>
   <body>
     <header class="header_section">
@@ -14,31 +14,40 @@
           <nav class="header_nav_block">
             <ul class="nav_unordered_list">
               <li class="unordered_list_item">
-                <a href=""> 
-                  <span data-lang="ru"> Главная</span>
-                   </a>
-
+                <a data-lang="ru" href=""> Главная </a>
+                <a data-lang="en" style="display: none" href=""> Main </a>
               </li>
               <li class="unordered_list_item">
-                <a href=""> Номера </a>
+                <a data-lang="ru" href=""> Номера </a>
+                <a data-lang="en" style="display: none" href=""> Rooms </a>
               </li>
               <li class="unordered_list_item">
-                <a href=""> Галерея </a>
+                <a data-lang="ru" href=""> Галерея </a>
+                <a data-lang="en" style="display: none" href=""> Gallery </a>
               </li>
               <li class="unordered_list_item">
-                <a href=""> Спец предложения </a>
+                <a data-lang="ru" href=""> Спец предложения </a>
+                <a data-lang="en" style="display: none" href="">
+                  Special offers
+                </a>
               </li>
               <li class="unordered_list_item">
-                <a href=""> Мероприятия </a>
+                <a data-lang="ru" href=""> Мероприятия </a>
+                <a data-lang="en" style="display: none" href=""> Events </a>
               </li>
               <li class="unordered_list_item">
-                <a href=""> Услуги </a>
+                <a data-lang="ru" href=""> Услуги </a>
+                <a data-lang="en" style="display: none" href=""> Services </a>
               </li>
               <li class="unordered_list_item">
-                <a href=""> Достопримечательности </a>
+                <a data-lang="ru" href=""> Достопримечательности </a>
+                <a data-lang="en" style="display: none" href="">
+                  Attractions
+                </a>
               </li>
               <li class="unordered_list_item">
-                <a href=""> Контакты </a>
+                <a data-lang="ru" href=""> Контакты </a>
+                <a data-lang="en" style="display: none" href=""> Contacts </a>
               </li>
             </ul>
           </nav>
@@ -76,44 +85,72 @@
                 src="/img/social icon/whatsapp-color-svgrepo-com.svg"
                 alt="social icon"
             /></a>
-            <a class="social_block_item" href="">
-              <img
-                class="social_item_icon"
-                src="/img/social icon/viber-color-svgrepo-com.svg"
-                alt="social icon"
-            /></a>
           </div>
-          <span class="social_block_span"> © 2015. Все права защищены </span>
+          <span data-lang="ru" class="social_block_span">
+            © 2015. Все права защищены.
+          </span>
+          <span data-lang="en" style="display: none" class="social_block_span">
+            © 2015. All rights reserved.
+          </span>
           <div class="language-switcher">
-            <span class="language-switcher_span"> Язык: </span>
-            <button class="language-switcher_button" data-lang="ru">RU</button>
-            <button class="language-switcher_button" data-lang="en">ENG</button>
+            <button class="language-switcher_button" onclick="changeLanguage('ru')">RU</button>
+            <button class="language-switcher_button" onclick="changeLanguage('en')">ENG</button>
           </div>
         </div>
         <div class="header_social_block"></div>
       </div>
-      <button class="header_button">Забронировать</button>
+      <button data-lang="ru" class="header_button">Забронировать</button>
+      <button data-lang="en" style="display: none" class="header_button">
+        To book
+      </button>
+    </header>
+
+    <header class="mobile-header">
+
+      <div class="mobile-header_menu-block">
+        <div class="menu-block">
+            <img class="menu-block_icon" src="/img/Hamburger.svg" alt="burger menu">
+        </div>
+        <img class="mobile_logo" src="/img/logo.png" alt="">
+      </div>
+      <button class="header_button mobile-header_button">
+        <span class="mobile-header_button_span" > Забронировать</span> </button>
     </header>
     <main class="main_section">
       <div class="main_section_up_container">
+
         <div class="logo_block"></div>
         <div class="time_weather_block">
-          <div class="time_discription">
+          <div data-lang="ru" class="time_discription">
             <span>Местное</span>
             <br />
             <span>время</span>
           </div>
+          <div data-lang="en" style="display: none" class="time_discription">
+            <span>Local</span>
+            <br />
+            <span>time</span>
+          </div>
+
           <div id="time" class="time_block"></div>
-          <div class="weather_dicription">
+          <div data-lang="ru" class="weather_dicription">
             <span>Погода </span>
             <br />
             <span>Волгоград</span>
           </div>
+          <div data-lang="en" style="display: none" class="weather_dicription">
+            <span>Weather </span>
+            <br />
+            <span>Volgograd</span>
+          </div>
+
           <div id="weather" class="weather_block"></div>
         </div>
       </div>
-      <div class="main_section_low_container">
+      <div data-lang="ru" class="main_section_low_container">
         <h1>Добро пожаловать в отель Hampton Volgograd</h1>
+
+        <div class="border_block"></div>
         <span class="main_low_container_span">
           Hampton by Hilton Volgograd Profsoyuznaya – это современный отель,
           который предоставляет свои услуги путешественникам, ценящим качество
@@ -124,39 +161,91 @@
           Hampton by Hilton - Превосходя ожидания.</span
         >
       </div>
+
+      <div
+        data-lang="en"
+        style="display: none"
+        class="main_section_low_container"
+      >
+        <h1>Welcome to the Hampton Volgograd Hotel</h1>
+        <span class="main_low_container_span">
+          Hampton by Hilton Volgograd Profsoyuznaya – это современный отель, The
+          Hampton by Hilton Volgograd Profsoyuznaya is a modern hotel that
+          provides its services to travelers who value quality for reasonable
+          money.
+        </span>
+        <br />
+        <span class="main_low_container_span">
+          Hampton by Hilton - Exceeding expectations.</span
+        >
+      </div>
     </main>
     <article class="article_section">
       <a class="article_item grid_item1" href="">
-        <span class="article_item_span"> Уютные номера</span>
+        <span data-lang="ru" class="article_item_span">
+          Уютные <br />
+          номера</span
+        >
+        <span data-lang="en" style="display: none" class="article_item_span">
+          Cozy <br />
+          rooms</span
+        >
       </a>
+
       <a class="article_item grid_item2" href="">
-        <span class="article_item_span">
+        <span data-lang="ru" class="article_item_span">
           Специальные <br />
           предложения</span
         >
+        <span data-lang="en" style="display: none" class="article_item_span">
+          Special <br />
+          offers</span
+        >
       </a>
+
       <a class="article_item grid_item3" href="">
-        <span class="article_item_span">
+        <span data-lang="ru" class="article_item_span">
           Организация <br />
           мероприятий</span
         >
+        <span data-lang="en" style="display: none" class="article_item_span">
+          Organization <br />
+          of events</span
+        >
       </a>
       <a class="article_item grid_item4" href="">
-        <span class="article_item_span">
+        <span data-lang="ru" class="article_item_span">
           Галерея <br />
           отеля
         </span>
+        <span data-lang="en" style="display: none" class="article_item_span">
+          Hotel <br />
+          Gallery
+        </span>
       </a>
       <a class="article_item grid_item5" href="">
-        <span class="article_item_span">
+        <span data-lang="ru" class="article_item_span">
           Услуги <br />
           24 часа</span
         >
+        <span data-lang="en" style="display: none" class="article_item_span">
+          24-hour <br />
+          services</span
+        >
       </a>
       <a class="article_item grid_item6" href="">
-        <span class="article_item_span span6">
+        <span data-lang="ru" class="article_item_span span6">
           Что посетить <br />
           в Волгограде</span
+        >
+
+        <span
+          data-lang="en"
+          style="display: none"
+          class="article_item_span span6"
+        >
+          What to visit <br />
+          in Volgograd</span
         >
       </a>
     </article>
@@ -205,8 +294,28 @@
       fetchWeather();
     </script>
 
+    <script>
+      // Функция для смены языка
+      function changeLanguage(lang) {
+        // Скрываем все элементы с атрибутом data-lang
+        document.querySelectorAll("[data-lang]").forEach((element) => {
+          element.style.display = "none";
+        });
 
+        // Показываем элементы с выбранным языком
+        document
+          .querySelectorAll(`[data-lang="${lang}"]`)
+          .forEach((element) => {
+            element.style.display = "block";
+          });
 
+        // Сохраняем выбор языка в localStorage
+        localStorage.setItem("language", lang);
+      }
 
+      // При загрузке страницы проверяем сохраненный язык
+      const savedLanguage = localStorage.getItem("language") || "ru";
+      changeLanguage(savedLanguage);
+    </script>
   </body>
 </html>
