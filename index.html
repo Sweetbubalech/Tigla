@@ -110,9 +110,15 @@
           </div>
         </div>
       </div>
-      <button data-lang="ru" class="header_button">Забронировать</button>
-      <button data-lang="en" style="display: none" class="header_button">
-        To book
+      <button data-lang="ru" class="header_button">
+        <a
+          class="button-link"
+          href="http://www.hiltoneasteurope.com"
+          target="_blank"
+        >
+          <span data-lang="ru"> Забронировать </span>
+          <span data-lang="en" style="display: none"> To book</span>
+        </a>
       </button>
     </header>
 
@@ -185,12 +191,29 @@
         </nav>
       </div>
       <button class="header_button mobile-header_button">
-        <span class="mobile-header_button_span"> Забронировать</span>
+        <a
+          class="button-link"
+          href="http://www.hiltoneasteurope.com"
+          target="_blank"
+        >
+          <span data-lang="ru"> Забронировать </span>
+          <span data-lang="en" style="display: none"> To book</span>
+        </a>
       </button>
     </header>
     <main class="main_section">
+      <video
+        class="video-wrapper"
+        playsinline
+        autoplay
+        muted
+        loop
+        src="/video/hello_site_video.mp4"
+        poster="/img/Curves 2.png"
+      ></video>
+
       <div class="main_section_up_container">
-        <div class="logo_block"></div>
+        <div class="logo_block"><img src="/img/logo.png" alt="" /></div>
         <div class="time_weather_block">
           <div data-lang="ru" class="time_discription">
             <span>Местное</span>
@@ -326,7 +349,7 @@
     <footer class="footer-section">
       <div class="header_initial_low_container footer_container">
         <span class="footer_contact-span">
-          8 800 2000 600  /  hampton@mail.ru
+          8 800 2000 600 / hampton@mail.ru
         </span>
         <div class="social_block">
           <a class="social_block_item" href="">
@@ -385,20 +408,9 @@
       </div>
     </footer>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const burgerIcon = document.getElementById("burger-icon");
-        const mobileNav = document.getElementById("mobile-nav");
-
-        burgerIcon.addEventListener("click", function () {
-          mobileNav.classList.toggle("active"); // Добавляем или удаляем класс "active"
-        });
-      });
-    </script>
+    <script src="/scripts/burger-menu.js"></script>
     <script src="/scripts/language-switcher.js"></script>
     <script src="/scripts/wheather.js"></script>
     <script src="/scripts/time.js"></script>
   </body>
-
-
 </html>
