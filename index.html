@@ -93,11 +93,22 @@
             © 2015. All rights reserved.
           </span>
           <div class="language-switcher">
-            <button class="language-switcher_button" onclick="changeLanguage('ru')">RU</button>
-            <button class="language-switcher_button" onclick="changeLanguage('en')">ENG</button>
+            <span data-lang="ru"> Язык:</span>
+            <span data-lang="en" style="display: none"> Language</span>
+            <button
+              class="language-switcher_button"
+              onclick="changeLanguage('ru')"
+            >
+              RU
+            </button>
+            <button
+              class="language-switcher_button"
+              onclick="changeLanguage('en')"
+            >
+              ENG
+            </button>
           </div>
         </div>
-        <div class="header_social_block"></div>
       </div>
       <button data-lang="ru" class="header_button">Забронировать</button>
       <button data-lang="en" style="display: none" class="header_button">
@@ -106,19 +117,79 @@
     </header>
 
     <header class="mobile-header">
-
       <div class="mobile-header_menu-block">
         <div class="menu-block">
-            <img class="menu-block_icon" src="/img/Hamburger.svg" alt="burger menu">
+          <img
+            id="burger-icon"
+            class="menu-block_icon"
+            src="/img/Hamburger.svg"
+            alt="burger menu"
+          />
         </div>
-        <img class="mobile_logo" src="/img/logo.png" alt="">
+        <img class="mobile_logo" src="/img/logo.png" alt="" />
+        <nav id="mobile-nav" class="mobile-header_nav-block">
+          <ul class="nav_unordered_list">
+            <li class="unordered_list_item">
+              <a data-lang="ru" href=""> Главная </a>
+              <a data-lang="en" style="display: none" href=""> Main </a>
+            </li>
+            <li class="unordered_list_item">
+              <a data-lang="ru" href=""> Номера </a>
+              <a data-lang="en" style="display: none" href=""> Rooms </a>
+            </li>
+            <li class="unordered_list_item">
+              <a data-lang="ru" href=""> Галерея </a>
+              <a data-lang="en" style="display: none" href=""> Gallery </a>
+            </li>
+            <li class="unordered_list_item">
+              <a data-lang="ru" href=""> Спец предложения </a>
+              <a data-lang="en" style="display: none" href="">
+                Special offers
+              </a>
+            </li>
+            <li class="unordered_list_item">
+              <a data-lang="ru" href=""> Мероприятия </a>
+              <a data-lang="en" style="display: none" href=""> Events </a>
+            </li>
+            <li class="unordered_list_item">
+              <a data-lang="ru" href=""> Услуги </a>
+              <a data-lang="en" style="display: none" href=""> Services </a>
+            </li>
+            <li class="unordered_list_item">
+              <a data-lang="ru" href=""> Достопримечательности </a>
+              <a data-lang="en" style="display: none" href=""> Attractions </a>
+            </li>
+            <li class="unordered_list_item">
+              <a data-lang="ru" href=""> Контакты </a>
+              <a data-lang="en" style="display: none" href=""> Contacts </a>
+            </li>
+            <li class="unordered_list_item">
+              <div class="language-switcher">
+                <span data-lang="ru"> Язык:</span>
+                <span data-lang="en" style="display: none"> Language</span>
+                <button
+                  class="language-switcher_button"
+                  onclick="changeLanguage('ru')"
+                >
+                  RU
+                </button>
+                <button
+                  class="language-switcher_button"
+                  onclick="changeLanguage('en')"
+                >
+                  ENG
+                </button>
+              </div>
+            </li>
+          </ul>
+        </nav>
       </div>
       <button class="header_button mobile-header_button">
-        <span class="mobile-header_button_span" > Забронировать</span> </button>
+        <span class="mobile-header_button_span"> Забронировать</span>
+      </button>
     </header>
     <main class="main_section">
       <div class="main_section_up_container">
-
         <div class="logo_block"></div>
         <div class="time_weather_block">
           <div data-lang="ru" class="time_discription">
@@ -148,7 +219,9 @@
         </div>
       </div>
       <div data-lang="ru" class="main_section_low_container">
-        <h1>Добро пожаловать в отель Hampton Volgograd</h1>
+        <h1 class="main_section_title">
+          Добро пожаловать в отель Hampton Volgograd
+        </h1>
 
         <div class="border_block"></div>
         <span class="main_low_container_span">
@@ -183,11 +256,11 @@
     <article class="article_section">
       <a class="article_item grid_item1" href="">
         <span data-lang="ru" class="article_item_span">
-          Уютные <br />
+          Уютные <br class="br-none" />
           номера</span
         >
         <span data-lang="en" style="display: none" class="article_item_span">
-          Cozy <br />
+          Cozy <br class="br-none" />
           rooms</span
         >
       </a>
@@ -215,21 +288,21 @@
       </a>
       <a class="article_item grid_item4" href="">
         <span data-lang="ru" class="article_item_span">
-          Галерея <br />
+          Галерея <br class="br-none" />
           отеля
         </span>
         <span data-lang="en" style="display: none" class="article_item_span">
-          Hotel <br />
+          Hotel <br class="br-none" />
           Gallery
         </span>
       </a>
       <a class="article_item grid_item5" href="">
         <span data-lang="ru" class="article_item_span">
-          Услуги <br />
+          Услуги <br class="br-none" />
           24 часа</span
         >
         <span data-lang="en" style="display: none" class="article_item_span">
-          24-hour <br />
+          24-hour <br class="br-none" />
           services</span
         >
       </a>
@@ -250,72 +323,82 @@
       </a>
     </article>
 
-    <!-- TIME -->
+    <footer class="footer-section">
+      <div class="header_initial_low_container footer_container">
+        <span class="footer_contact-span">
+          8 800 2000 600  /  hampton@mail.ru
+        </span>
+        <div class="social_block">
+          <a class="social_block_item" href="">
+            <img
+              class="social_item_icon"
+              src="/img/social icon/vk-v2-svgrepo-com.svg"
+              alt="social icon"
+          /></a>
+          <a class="social_block_item" href="">
+            <img
+              class="social_item_icon"
+              src="/img/social icon/whatsapp-color-svgrepo-com.svg"
+              alt="social icon"
+          /></a>
+          <a class="social_block_item" href="">
+            <img
+              class="social_item_icon"
+              src="/img/social icon/viber-color-svgrepo-com.svg"
+              alt="social icon"
+          /></a>
+          <a class="social_block_item" href="">
+            <img
+              class="social_item_icon"
+              src="/img/social icon/vk-v2-svgrepo-com.svg"
+              alt="social icon"
+          /></a>
+          <a class="social_block_item" href="">
+            <img
+              class="social_item_icon"
+              src="/img/social icon/whatsapp-color-svgrepo-com.svg"
+              alt="social icon"
+          /></a>
+        </div>
+        <span data-lang="ru" class="social_block_span">
+          © 2015. Все права защищены.
+        </span>
+        <span data-lang="en" style="display: none" class="social_block_span">
+          © 2015. All rights reserved.
+        </span>
+        <div class="language-switcher">
+          <span data-lang="ru"> Язык:</span>
+          <span data-lang="en" style="display: none"> Language</span>
+          <button
+            class="language-switcher_button"
+            onclick="changeLanguage('ru')"
+          >
+            RU
+          </button>
+          <button
+            class="language-switcher_button"
+            onclick="changeLanguage('en')"
+          >
+            ENG
+          </button>
+        </div>
+      </div>
+    </footer>
 
     <script>
-      const options = {
-        timeZone: "Europe/Moscow",
-        hour: "2-digit",
-        minute: "2-digit",
-      };
+      document.addEventListener("DOMContentLoaded", function () {
+        const burgerIcon = document.getElementById("burger-icon");
+        const mobileNav = document.getElementById("mobile-nav");
 
-      const time = new Date().toLocaleTimeString("ru-RU", options);
-      document.getElementById("time").innerText = time;
-      setInterval(fetchWeather, 6000);
-    </script>
-
-    <!-- WHEATHER -->
-
-    <script>
-      const apiKey = "f939ffce1cb62da66213e0bbb1a2cd6d";
-      const city = "Volgograd";
-      const lang = "ru";
-      const units = "metric";
-      const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=${lang}&units=${units}&appid=${apiKey}`;
-
-      function fetchWeather() {
-        fetch(url)
-          .then((response) => response.json())
-          .then((data) => {
-            if (data.cod === 200) {
-              const temperature = Math.round(data.main.temp);
-              document.getElementById("weather").innerText = `${temperature}°C`;
-            } else {
-              document.getElementById("weather").innerText =
-                "Не удалось загрузить данные о погоде";
-            }
-          })
-          .catch((error) => {
-            console.error("Ошибка при загрузке данных:", error);
-            document.getElementById("weather").innerText =
-              "Ошибка загрузки данных";
-          });
-      }
-      fetchWeather();
-    </script>
-
-    <script>
-      // Функция для смены языка
-      function changeLanguage(lang) {
-        // Скрываем все элементы с атрибутом data-lang
-        document.querySelectorAll("[data-lang]").forEach((element) => {
-          element.style.display = "none";
+        burgerIcon.addEventListener("click", function () {
+          mobileNav.classList.toggle("active"); // Добавляем или удаляем класс "active"
         });
-
-        // Показываем элементы с выбранным языком
-        document
-          .querySelectorAll(`[data-lang="${lang}"]`)
-          .forEach((element) => {
-            element.style.display = "block";
-          });
-
-        // Сохраняем выбор языка в localStorage
-        localStorage.setItem("language", lang);
-      }
-
-      // При загрузке страницы проверяем сохраненный язык
-      const savedLanguage = localStorage.getItem("language") || "ru";
-      changeLanguage(savedLanguage);
+      });
     </script>
+    <script src="/scripts/language-switcher.js"></script>
+    <script src="/scripts/wheather.js"></script>
+    <script src="/scripts/time.js"></script>
   </body>
+
+
 </html>
