@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Заголовок страницы</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="script" href="/scripts/language-switcher.js">
+  </head>
+  <body>
+    <header class="header_section">
+      <div class="header_initial_container">
+        <div class="header_initial_up_container">
+          <nav class="header_nav_block">
+            <ul class="nav_unordered_list">
+              <li class="unordered_list_item">
+                <a href=""> 
+                  <span data-lang="ru"> Главная</span>
+                   </a>
+
+              </li>
+              <li class="unordered_list_item">
+                <a href=""> Номера </a>
+              </li>
+              <li class="unordered_list_item">
+                <a href=""> Галерея </a>
+              </li>
+              <li class="unordered_list_item">
+                <a href=""> Спец предложения </a>
+              </li>
+              <li class="unordered_list_item">
+                <a href=""> Мероприятия </a>
+              </li>
+              <li class="unordered_list_item">
+                <a href=""> Услуги </a>
+              </li>
+              <li class="unordered_list_item">
+                <a href=""> Достопримечательности </a>
+              </li>
+              <li class="unordered_list_item">
+                <a href=""> Контакты </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="header_initial_low_container">
+          <div class="social_block">
+            <a class="social_block_item" href="">
+              <img
+                class="social_item_icon"
+                src="/img/social icon/vk-v2-svgrepo-com.svg"
+                alt="social icon"
+            /></a>
+            <a class="social_block_item" href="">
+              <img
+                class="social_item_icon"
+                src="/img/social icon/whatsapp-color-svgrepo-com.svg"
+                alt="social icon"
+            /></a>
+            <a class="social_block_item" href="">
+              <img
+                class="social_item_icon"
+                src="/img/social icon/viber-color-svgrepo-com.svg"
+                alt="social icon"
+            /></a>
+            <a class="social_block_item" href="">
+              <img
+                class="social_item_icon"
+                src="/img/social icon/vk-v2-svgrepo-com.svg"
+                alt="social icon"
+            /></a>
+            <a class="social_block_item" href="">
+              <img
+                class="social_item_icon"
+                src="/img/social icon/whatsapp-color-svgrepo-com.svg"
+                alt="social icon"
+            /></a>
+            <a class="social_block_item" href="">
+              <img
+                class="social_item_icon"
+                src="/img/social icon/viber-color-svgrepo-com.svg"
+                alt="social icon"
+            /></a>
+          </div>
+          <span class="social_block_span"> © 2015. Все права защищены </span>
+          <div class="language-switcher">
+            <span class="language-switcher_span"> Язык: </span>
+            <button class="language-switcher_button" data-lang="ru">RU</button>
+            <button class="language-switcher_button" data-lang="en">ENG</button>
+          </div>
+        </div>
+        <div class="header_social_block"></div>
+      </div>
+      <button class="header_button">Забронировать</button>
+    </header>
+    <main class="main_section">
+      <div class="main_section_up_container">
+        <div class="logo_block"></div>
+        <div class="time_weather_block">
+          <div class="time_discription">
+            <span>Местное</span>
+            <br />
+            <span>время</span>
+          </div>
+          <div id="time" class="time_block"></div>
+          <div class="weather_dicription">
+            <span>Погода </span>
+            <br />
+            <span>Волгоград</span>
+          </div>
+          <div id="weather" class="weather_block"></div>
+        </div>
+      </div>
+      <div class="main_section_low_container">
+        <h1>Добро пожаловать в отель Hampton Volgograd</h1>
+        <span class="main_low_container_span">
+          Hampton by Hilton Volgograd Profsoyuznaya – это современный отель,
+          который предоставляет свои услуги путешественникам, ценящим качество
+          за разумные деньги.
+        </span>
+        <br />
+        <span class="main_low_container_span">
+          Hampton by Hilton - Превосходя ожидания.</span
+        >
+      </div>
+    </main>
+    <article class="article_section">
+      <a class="article_item grid_item1" href="">
+        <span class="article_item_span"> Уютные номера</span>
+      </a>
+      <a class="article_item grid_item2" href="">
+        <span class="article_item_span">
+          Специальные <br />
+          предложения</span
+        >
+      </a>
+      <a class="article_item grid_item3" href="">
+        <span class="article_item_span">
+          Организация <br />
+          мероприятий</span
+        >
+      </a>
+      <a class="article_item grid_item4" href="">
+        <span class="article_item_span">
+          Галерея <br />
+          отеля
+        </span>
+      </a>
+      <a class="article_item grid_item5" href="">
+        <span class="article_item_span">
+          Услуги <br />
+          24 часа</span
+        >
+      </a>
+      <a class="article_item grid_item6" href="">
+        <span class="article_item_span span6">
+          Что посетить <br />
+          в Волгограде</span
+        >
+      </a>
+    </article>
+
+    <!-- TIME -->
+
+    <script>
+      const options = {
+        timeZone: "Europe/Moscow",
+        hour: "2-digit",
+        minute: "2-digit",
+      };
+
+      const time = new Date().toLocaleTimeString("ru-RU", options);
+      document.getElementById("time").innerText = time;
+      setInterval(fetchWeather, 6000);
+    </script>
+
+    <!-- WHEATHER -->
+
+    <script>
+      const apiKey = "f939ffce1cb62da66213e0bbb1a2cd6d";
+      const city = "Volgograd";
+      const lang = "ru";
+      const units = "metric";
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=${lang}&units=${units}&appid=${apiKey}`;
+
+      function fetchWeather() {
+        fetch(url)
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.cod === 200) {
+              const temperature = Math.round(data.main.temp);
+              document.getElementById("weather").innerText = `${temperature}°C`;
+            } else {
+              document.getElementById("weather").innerText =
+                "Не удалось загрузить данные о погоде";
+            }
+          })
+          .catch((error) => {
+            console.error("Ошибка при загрузке данных:", error);
+            document.getElementById("weather").innerText =
+              "Ошибка загрузки данных";
+          });
+      }
+      fetchWeather();
+    </script>
+
+
+
+
+  </body>
+</html>
